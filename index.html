@@ -1,0 +1,781 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Ritchie Steelson, Accounting Operations Manager in Auckland: finance work and the systems I have built.">
+<meta name="robots" content="noindex">
+<style>body{margin:0}</style></head><body>
+<meta charset="utf-8">
+<title>Ritchie Steelson Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Ubuntu:wght@400;500;700&family=Nunito:wght@400;600;800&family=Urbanist:wght@600;700&family=Manrope:wght@400;600;700&family=Hanken+Grotesk:wght@400;600;700&display=swap">
+<style>
+/* Layout: pill nav on top; hero with photo on a yellow shape; a moving skills band; light sections
+   alternating with deep-green bands; one 1120px column. Forest green + warm yellow, light and dark themes. */
+:root{
+  --green:#24442F; --green-2:#2F5A3E; --yellow:#F2B33D; --yellow-ink:#B97E0B;
+  --bg:#FFFFFF; --soft:#F4F4F1; --card:#F4F4F1; --ink:#1B1F1C; --muted:#5E6661; --line:#E3E4DF;
+  --on-green:#FFFFFF; --on-green-muted:#C9D5CC; --shadow:rgba(20,40,28,.18);
+  --font:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.65;transition:background .3s,color .3s;overflow-x:hidden}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance;font-weight:800;letter-spacing:-.01em}
+p{margin:0;max-width:62ch}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hl{font-style:italic;font-weight:700;color:var(--yellow-ink)}
+.kicker{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--ink)}
+.kicker::before{content:"";width:14px;height:2px;background:var(--yellow)}
+section{padding-block:clamp(56px,8vw,96px)}
+.sec-head{display:flex;flex-direction:column;gap:8px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(28px,4vw,40px)}
+.row-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;padding:6px 6px 6px 20px;border:2px solid var(--green);transition:background .2s,color .2s}
+.btn.solid{background:var(--green);color:#fff}
+.btn.ghost{padding:10px 22px;color:var(--ink);border-color:var(--ink)}
+.btn .dot{width:34px;height:34px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;transition:transform .25s}
+.btn .dot svg{width:15px;height:15px;fill:none;stroke:var(--green);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.btn:hover .dot{transform:translateX(4px)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+
+/* Nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding-top:14px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.nav{background:var(--green);border-radius:999px;display:flex;align-items:center;gap:18px;padding:8px 8px 8px 12px;box-shadow:0 12px 30px -18px var(--shadow)}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:18px}
+.logo i{width:34px;height:34px;border-radius:50%;background:var(--yellow);color:var(--green);display:grid;place-items:center;font-style:normal;font-weight:800;box-shadow:inset 0 0 0 3px var(--green),0 0 0 2px var(--yellow)}
+.logo b{color:var(--yellow)}
+.links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.links a{color:#E7EEE9;text-decoration:none;font-size:13.5px;font-weight:500;padding:6px 10px;border-radius:999px;white-space:nowrap;transition:color .2s}
+.links a.phone{display:none}
+.links a:hover,.links a.on{color:var(--yellow)}
+.links a.on{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.mode{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;display:grid;place-items:center;cursor:pointer;flex:none}
+.mode svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cta{background:#fff;color:var(--green);text-decoration:none;font-weight:700;font-size:13.5px;border-radius:999px;padding:9px 20px;white-space:nowrap;flex:none}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:clamp(40px,6vw,70px) 30px}
+.hello{position:relative;display:inline-block;border:1.5px solid var(--ink);padding:4px 14px;font-size:15px;font-weight:500;width:fit-content}
+.hello i{position:absolute;width:8px;height:8px;background:var(--bg);border:1.5px solid var(--yellow)}
+.hello i:nth-child(1){left:-5px;top:-5px}.hello i:nth-child(2){right:-5px;top:-5px}.hello i:nth-child(3){left:-5px;bottom:-5px}.hello i:nth-child(4){right:-5px;bottom:-5px}
+.hero h1{font-size:clamp(34px,5vw,54px);margin-top:20px}
+.hero h1 .hl{border-bottom:3px solid var(--yellow);padding-bottom:2px}
+.hero .lede{margin-top:18px;color:var(--muted);font-size:15.5px;max-width:48ch}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.stage{position:relative;justify-self:center;width:min(440px,100%);aspect-ratio:1}
+.fig{position:absolute;left:10%;right:8%;top:0;bottom:6%;overflow:hidden;border-radius:0 0 50% 50%/0 0 34% 34%}
+.blob{position:absolute;left:0;right:0;top:24%;bottom:0;background:var(--yellow);border-radius:50% 50% 50% 50%/40% 40% 34% 34%}
+.ring{position:absolute;inset:4% 0 0 0;border:1.5px solid var(--ink);border-radius:50%;clip-path:inset(0 70% 0 0);opacity:.6}
+.portrait{position:absolute;left:50%;bottom:0;width:88%;height:auto;margin-left:-44%}
+.chip{position:absolute;font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 10px 20px -12px var(--shadow)}
+.chip.g{background:var(--green);color:#fff;left:-2%;bottom:12%}
+.chip.y{background:var(--yellow);color:#1B1F1C;right:-2%;top:56%}
+.chip::before{content:"";position:absolute;width:0;height:0;border:7px solid transparent}
+.chip.g::before{border-bottom-color:var(--green);border-left-color:var(--green);top:-9px;left:6px;transform:rotate(10deg)}
+.chip.y::before{border-top-color:var(--yellow);border-left-color:var(--yellow);top:8px;left:-9px}
+.badge{position:absolute;right:2%;top:10%;width:92px;height:92px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 0 0 4px var(--bg)}
+.badge svg.txt{position:absolute;inset:0;width:100%;height:100%}
+.badge svg.txt text{font-size:9.6px;font-weight:700;letter-spacing:2.4px;fill:#fff;font-family:var(--font)}
+.badge span{width:36px;height:36px;border-radius:50%;background:var(--yellow);display:grid;place-items:center}
+.badge span svg{width:16px;height:16px;fill:none;stroke:var(--green);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* Moving band */
+main{overflow-x:clip}
+.band{position:relative;margin-block:20px 0;transform:rotate(-1.6deg);background:var(--yellow);border-bottom:10px solid var(--green);overflow:hidden;padding-block:14px}
+.band .track{display:flex;gap:34px;width:max-content;font-size:clamp(18px,2.4vw,24px);font-weight:700;color:#1B1F1C;white-space:nowrap}
+.band .track span{display:flex;align-items:center;gap:34px}
+.band .track span::after{content:"\2733";color:var(--green);font-size:.9em}
+
+/* Services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 30px -22px var(--shadow)}
+.card .ic{width:52px;height:52px;border-radius:50%;background:var(--bg);display:grid;place-items:center}
+.card .ic svg{width:24px;height:24px;fill:none;stroke:var(--green-2);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:18px}
+.card p{font-size:14.5px;color:var(--muted)}
+
+/* Green bands */
+.green{background:var(--green);color:var(--on-green)}
+.green .kicker{color:var(--on-green)}
+.green .hl{color:var(--yellow)}
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:center}
+.disc{position:relative;width:min(400px,100%);aspect-ratio:1;justify-self:center}
+.disc::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--yellow)}
+.disc img{position:absolute;inset:8%;width:84%;height:84%;border-radius:50%;object-fit:cover;border:5px solid var(--green)}
+.tags{position:absolute;left:0;right:0;bottom:4%;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;transform:rotate(-8deg)}
+.tags span{font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;background:var(--green);color:#fff;border:1.5px solid var(--yellow)}
+.tags span:nth-child(even){background:var(--yellow);color:#1B1F1C;border-color:var(--green)}
+.about h2{font-size:clamp(28px,4vw,40px);margin-top:8px}
+.about p{color:var(--on-green-muted);margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,auto);gap:10px 32px;margin-top:26px;width:fit-content}
+.stats b{display:block;font-size:30px;color:var(--yellow);font-weight:800;line-height:1.1}
+.stats small{font-size:13px;color:var(--on-green-muted)}
+.green .btn.solid{background:transparent;border-color:var(--yellow)}
+
+/* Portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:inherit;font-weight:600;font-size:13.5px;border:1.5px solid var(--line);background:transparent;color:var(--ink);padding:7px 16px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.filters button.on{background:var(--green);border-color:var(--green);color:#fff}
+.note{font-size:13.5px;color:var(--muted);margin-top:14px}
+.works{display:flex;flex-direction:column;gap:24px;margin-top:28px}
+.sys{background:var(--card);border-radius:16px;padding:24px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:28px;align-items:center}
+.sys[hidden],.grid article[hidden]{display:none}
+.sys-copy{display:flex;flex-direction:column;gap:10px;min-width:0}
+.sys-copy h3{font-size:22px}
+.sys-copy p{font-size:15px;color:var(--muted)}
+.pill{font-size:12.5px;font-weight:700;color:var(--green-2);background:color-mix(in srgb,var(--yellow) 30%,transparent);padding:3px 12px;border-radius:999px;width:fit-content}
+.pill.built{color:var(--yellow-ink);background:transparent;border:1.5px solid var(--yellow)}
+.facts-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.facts-list li{padding-left:20px;position:relative}
+.facts-list li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--yellow)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.grid article{background:var(--card);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:transform .25s}
+.grid article:hover{transform:translateY(-3px)}
+.grid h3{font-size:16.5px}
+.grid p{font-size:14px;color:var(--muted)}
+.grid .who{font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:6px}
+
+/* Results */
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.case{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.case h3{font-size:20px;color:var(--yellow)}
+.case p{font-size:15px;color:var(--on-green-muted)}
+.sub{font-size:22px;margin:40px 0 18px}
+.green .note{color:var(--on-green-muted)}
+
+/* Resume */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.col-title{font-size:20px;margin-bottom:16px}
+.tl{display:flex;flex-direction:column;gap:20px;border-left:2px solid var(--line);padding-left:22px;margin-left:6px}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;left:-30px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--yellow);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--green)}
+.tl .when{font-size:13px;font-weight:700;color:var(--yellow-ink)}
+.tl h3{font-size:16.5px;margin-top:2px}
+.tl p{font-size:14.5px;color:var(--muted)}
+.look{columns:2;column-gap:32px;margin:12px 0 0;padding-left:18px;font-size:14.5px;color:var(--muted)}
+.look li{break-inside:avoid;margin-bottom:6px}
+.look li::marker{color:var(--yellow)}
+
+/* Tools */
+.center{text-align:center;align-items:center}
+.center .kicker{justify-content:center}
+.toolrow{display:flex;flex-wrap:wrap;justify-content:center;gap:22px}
+.tool{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:13.5px;font-weight:600}
+.tool i{width:76px;height:76px;border-radius:50%;background:var(--card);display:grid;place-items:center;transition:transform .25s,box-shadow .25s}
+.tool i svg{width:34px;height:34px}
+.tool:hover i{transform:translateY(-5px);box-shadow:0 0 0 3px var(--yellow),0 14px 22px -14px var(--shadow)}
+
+/* Contact */
+.reach{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.reach div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.reach b{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--yellow)}
+.reach span,.reach a{color:var(--on-green);word-break:break-word}
+footer{padding-block:22px;font-size:13px;color:var(--muted)}
+
+/* System screens: each .mk-* reproduces that system's own look (single-theme by design), sample data only */
+.scroller{overflow-x:auto;border-radius:12px;box-shadow:0 18px 40px -24px rgba(10,30,25,.45);border:1px solid var(--rule)}
+.mk{min-width:640px;font-size:12px;line-height:1.35;color:#14171A;display:grid}
+.mk h4{margin:0;font-size:16px}
+.mk small{font-size:10.5px}
+.mk aside{display:flex;flex-direction:column;gap:3px;padding:14px 10px}
+.mk aside span{padding:6px 9px;border-radius:8px;display:flex;justify-content:space-between}
+.mk table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.mk td,.mk th{text-align:left;padding:6px 8px}
+.mk td+td,.mk th+th{text-align:right}
+
+/* Group reporting: light, IBM Plex Sans, green */
+.mk-ms{grid-template-columns:170px 1fr;background:#F4F6F4;font-family:"IBM Plex Sans",system-ui,sans-serif}
+.mk-ms aside{background:#fff;border-right:1px solid #E4E9E5}
+.ms-brand{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.ms-brand i{width:26px;height:26px;border-radius:8px;background:#16A34A}
+.ms-brand small{display:block;color:#6B7770;font-size:9.5px}
+.ms-sel{border:1px solid #DDE5DF;background:#F7FAF8;border-radius:7px;padding:5px 8px;color:#4B564F;margin-bottom:4px}
+.ms-g{margin:8px 0 2px;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8A958E}
+.mk-ms aside span{color:#4B564F}
+.mk-ms aside span.on{background:#E9F6EE;color:#15803D;font-weight:700}
+.ms-sync{margin-top:auto;font-size:10px;color:#6B7770;display:flex;gap:6px;align-items:center;padding-top:14px}
+.ms-sync em{width:7px;height:7px;border-radius:50%;background:#16A34A}
+.ms-main{padding:14px;display:flex;flex-direction:column;gap:10px}
+.ms-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ms-top h4{color:#15803D}
+.ms-top small{color:#6B7770}
+.ms-btns{display:flex;gap:5px}
+.ms-btns span{border:1px solid #DDE5DF;border-radius:8px;padding:4px 8px;background:#fff;font-size:10.5px}
+.ms-btns span.g{background:#16A34A;color:#fff;border-color:#16A34A}
+.ms-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.ms-kpis div{background:#fff;border:1px solid #E4E9E5;border-radius:11px;padding:8px}
+.ms-kpis small{display:block;color:#6B7770}
+.ms-kpis b{display:block;font-size:16px;font-variant-numeric:tabular-nums}
+.ms-kpis em{font-style:normal;font-size:10px;color:#8A958E}
+.mk .up{color:#15803D}.mk .dn,.mk .neg{color:#B91C1C}
+.ms-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ms-card{background:#fff;border:1px solid #E4E9E5;border-radius:12px;padding:10px}
+.ms-h{margin:0 0 6px;font-weight:700;font-size:12px}
+.ms-card svg{width:100%;height:auto;display:block}
+.ms-card th{background:#F7FAF8;font-size:9.5px;text-transform:uppercase;color:#8A958E;font-weight:600}
+.ms-card td{border-bottom:1px solid #F3F6F4;font-size:11px}
+.ms-card tr.net td{background:#16A34A;color:#fff;font-weight:700;border:0}
+
+/* Accounting platform: navy sidebar, system font, blue */
+.mk-mf{grid-template-columns:150px 1fr;background:#f4f5f7;font-family:"Segoe UI",system-ui,sans-serif}
+.mk-mf aside{background:#0e1726;color:#c9d2e1}
+.mf-brand{display:flex;gap:8px;align-items:center;margin-bottom:10px;color:#fff}
+.mf-brand i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#3987e5,#1c5cab);display:grid;place-items:center;font-style:normal;font-weight:700}
+.mk-mf aside span.on{background:#16223a;color:#fff;box-shadow:inset 3px 0 #2a78d6}
+.mk-mf aside em{font-style:normal;color:#7f8ba3}
+.mf-main{padding:14px;display:flex;flex-direction:column;gap:9px}
+.mf-top small{color:#7c8494}
+.mf-filter{display:flex;gap:4px}
+.mf-filter span{border:1px solid #d3d7de;background:#fff;border-radius:8px;padding:3px 9px}
+.mf-filter span.on{background:#eaf2fc;color:#1c5cab;border-color:#bcd6f3}
+.mf-filter .sel{margin-left:6px}
+.mf-hero{background:#fff;border:1px solid #e6e8ec;border-radius:12px;padding:12px;display:flex;justify-content:space-between;gap:14px}
+.mf-hero small{display:block;color:#7c8494}
+.mf-hero b{display:block;font-size:34px;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.mf-hero dl{margin:0;display:grid;grid-template-columns:auto auto;gap:4px 12px;align-content:center;font-size:11px}
+.mf-hero dt{color:#7c8494}.mf-hero dd{margin:0;font-weight:600;text-align:right}
+.mf-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.mf-tiles div{background:#fff;border:1px solid #e6e8ec;border-radius:12px;padding:9px}
+.mf-tiles small{display:block;color:#7c8494}
+.mf-tiles b{display:block;font-size:17px;font-variant-numeric:tabular-nums}
+.mf-tiles em{font-style:normal;font-size:10px;color:#7c8494}
+.mf-tiles .up{color:#006300}.mf-tiles .dn{color:#e34948}
+.mf-chart{background:#fff;border:1px solid #e6e8ec;border-radius:12px;padding:9px}
+.mf-chart small{color:#4a5160;font-weight:600}
+.mf-chart svg{width:100%;height:auto;display:block;margin-top:4px}
+
+/* Roster: frosted sidebar, Ubuntu body with heavy headings, red accent (from the system's app-theme) */
+.mk-cd{grid-template-columns:140px 1fr;background:#F6F3EF radial-gradient(circle at 0 0,rgba(200,16,46,.10),transparent 45%),radial-gradient(circle at 100% 100%,rgba(240,138,28,.09),transparent 45%);font-family:Ubuntu,system-ui,sans-serif;color:#1B1716}
+.mk-cd aside{background:rgba(255,255,255,.58);border-right:1px solid #ECE6DF}
+.cd-brand{display:flex;gap:8px;align-items:center;margin-bottom:10px;font-size:14px}
+.cd-brand i{width:28px;height:28px;border-radius:9px;background:#fff;display:grid;place-items:center;box-shadow:0 1px 3px rgba(30,20,15,.12)}
+.mk-cd aside span{color:#4A423E;border-radius:12px}
+.mk-cd aside span.on{background:rgba(255,255,255,.85);color:#C8102E;font-weight:700;box-shadow:0 1px 3px rgba(30,20,15,.08)}
+.cd-main{padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.cd-top{display:flex;gap:10px;align-items:center}
+.cd-top b{font-size:13px}
+.cd-top small{color:#7A716B}
+.cd-top em{font-style:normal;color:#1F9D57;font-size:10.5px;margin-left:auto}
+.cd-sw{width:30px;height:16px;border-radius:99px;background:#fff;border:1px solid #ECE6DF;position:relative}
+.cd-sw i{position:absolute;left:2px;top:2px;width:10px;height:10px;border-radius:50%;background:#F5A524}
+.cd-card{background:#fff;border-radius:16px;padding:9px 12px;box-shadow:0 1px 2px rgba(30,20,15,.04),0 8px 24px rgba(30,20,15,.06)}
+.cd-card h4{font-size:17px;font-weight:700;letter-spacing:-.02em}
+.cd-card small{color:#7A716B}
+.cd-fc{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:11px;color:#4A423E}
+.cd-fc b{color:#1B1716}
+.cd-sec{background:#fff;border:1px solid #ECE6DF;border-radius:8px;padding:3px 9px;font-size:10.5px;color:#4A423E}
+.cd-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.cd-kpis div{background:#fff;border-radius:14px;padding:8px 9px;box-shadow:0 1px 2px rgba(30,20,15,.04),0 8px 24px rgba(30,20,15,.06)}
+.cd-kpis b{display:block;font-size:18px;font-weight:700;letter-spacing:-.02em}
+.cd-kpis b.ok{color:#1F9D57}
+.cd-kpis small{color:#7A716B}
+.cd-tools{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.cd-gen{background:linear-gradient(135deg,#D2122F,#A50E26);color:#fff;border-radius:8px;padding:4px 11px;font-weight:700;font-size:11px}
+.cd-dark{background:#16232f;color:#fff;border-radius:8px;padding:4px 10px;font-size:10.5px}
+.cd-learn{background:#F4F3FD;border:1px solid #AFA9EC;border-radius:8px;padding:6px 9px;font-size:10.5px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cd-lb{background:#9e1028;color:#fff;border-radius:6px;padding:2px 8px}
+.cd-learn small{color:#3C3489}
+.cd-grid{display:grid;grid-template-columns:62px repeat(6,1fr);gap:3px;background:#fff;border-radius:14px;padding:8px}
+.cd-grid > div{min-height:28px;font-size:10px}
+.cd-grid .h{font-weight:700;color:#7A716B;font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:3px}
+.cd-grid .h.today{color:#C8102E;box-shadow:inset 0 -3px #C8102E}
+.cd-grid .n{font-weight:500;display:flex;align-items:center}
+.cd-grid .s{border:1px solid #ECE6DF;border-left-width:4px;border-radius:7px;padding:3px 4px;text-align:center;background:#fff;font-weight:700}
+.cd-grid .s i{display:block;font-style:normal;color:#fff;border-radius:3px;font-size:8.5px;width:fit-content;margin:0 auto 2px;padding:0 4px}
+.cd-grid .mgr{border-left-color:#9E1028}.cd-grid .mgr i{background:#9E1028}
+.cd-grid .foh{border-left-color:#3B5B78}.cd-grid .foh i{background:#3B5B78}
+.cd-grid .boh{border-left-color:#C2562A}.cd-grid .boh i{background:#C2562A}
+.cd-grid .today{background-color:rgba(216,31,38,.06)}
+.cd-grid .we{background-color:rgba(127,127,127,.045)}
+.cd-grid .lv{background:#E6F1FB;color:#0C447C;border-radius:7px;display:grid;place-items:center;font-weight:700}
+
+/* Team workspace: pastel, Nunito, lilac */
+.mk-oh{background:#F6F4FB radial-gradient(circle at 100% 0,#FFE6F0,transparent 40%);font-family:Nunito,system-ui,sans-serif;color:#1D1A2B;padding:14px;gap:10px}
+.oh-top{display:flex;justify-content:space-between;align-items:center}
+.oh-top b{font-family:"Plus Jakarta Sans",sans-serif;font-size:17px;font-weight:800}
+.oh-top span{background:#fff;border-radius:999px;padding:5px 12px;color:#6B6780;border:1px solid #ECE9F3}
+.oh-add{display:flex;gap:8px;background:#fff;border-radius:18px;padding:6px 6px 6px 12px;align-items:center;border:1px solid #ECE9F3}
+.oh-add span{flex:1;color:#6B6780;font-family:"IBM Plex Mono",monospace;font-size:10.5px}
+.oh-add em{font-style:normal;background:#16141F;color:#fff;border-radius:10px;padding:5px 11px;font-weight:700}
+.oh-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.oh-stats div{background:#fff;border-radius:18px;padding:9px;display:grid;grid-template-columns:30px 1fr;column-gap:7px;align-items:center}
+.oh-stats i{grid-row:span 2;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-style:normal}
+.oh-stats small{color:#6B6780}
+.oh-stats b{font-family:"Plus Jakarta Sans",sans-serif;font-size:18px;font-weight:800}
+.oh-row{display:grid;grid-template-columns:.8fr 1.2fr;gap:8px}
+.oh-card{background:#fff;border-radius:24px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.oh-card p{margin:0;font-weight:800}
+.oh-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.oh-card li{display:flex;align-items:center;gap:7px}
+.oh-card li em{width:8px;height:8px;border-radius:50%}
+.oh-card li span{margin-left:auto;background:#F3F1F8;border-radius:999px;padding:2px 8px;font-size:10px;color:#6B6780}
+
+/* Company portal: graphite + champagne gold, Urbanist/Manrope */
+.mk-pt{background:linear-gradient(160deg,#ececef,#f8f8f9);font-family:Manrope,system-ui,sans-serif;color:#121216;padding:14px;gap:10px}
+.pt-top{display:flex;gap:12px;align-items:center}
+.pt-top > b{font-family:Urbanist,sans-serif;font-size:15px}
+.pt-bar{display:flex;gap:3px;background:#121216;border-radius:999px;padding:3px}
+.pt-bar span{color:#f4f2ee;padding:4px 10px;border-radius:999px;display:flex;gap:5px;align-items:center}
+.pt-bar span.on{background:#c8a96a;color:#17140e;font-weight:700}
+.pt-bar em{width:6px;height:6px;border-radius:50%}
+.mk-pt h4{font-family:Urbanist,sans-serif;font-size:26px;font-weight:600}
+.pt-row{display:grid;grid-template-columns:1fr 1.2fr;gap:9px}
+.pt-card{background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.8);border-radius:20px;padding:11px;display:flex;flex-direction:column;gap:7px}
+.pt-card > small{color:#6c6b74;letter-spacing:.08em}
+.pt-next{background:#121216;color:#f4f2ee;border-radius:16px;padding:9px 11px;display:flex;gap:12px;align-items:center}
+.pt-next b{font-size:16px}
+.pt-l{margin:2px 0 0;font-weight:700}
+.pt-need{display:flex;gap:7px;align-items:center}
+.pt-need em{width:7px;height:7px;border-radius:50%}
+.pt-need span{margin-left:auto;border:1px solid #d6d4cf;border-radius:999px;padding:2px 9px;font-size:10px}
+.pt-apps{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.pt-apps div{background:rgba(255,255,255,.7);border-radius:18px;padding:10px;display:flex;flex-direction:column;gap:3px}
+.pt-apps i{width:30px;height:30px;border-radius:10px;color:#fff;display:grid;place-items:center;font-style:normal;font-weight:700}
+.pt-apps small{color:#6c6b74}
+
+/* Property ledger: dark slate rail, Hanken Grotesk, teal and brass */
+.mk-rt{grid-template-columns:140px 1fr;background:#F3F5F6;font-family:"Hanken Grotesk",system-ui,sans-serif;color:#0E191E}
+.mk-rt aside{background:#0F1C21;color:#DBE4E8}
+.mk-rt aside > b{margin-bottom:8px}
+.mk-rt aside span.on{background:#182A31;color:#fff;box-shadow:inset 3px 0 #C09A5F}
+.mk-rt aside em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:10px;color:#869AA2}
+.mk-rt aside em.w{color:#E3B25E}
+.rt-main{padding:14px;display:flex;flex-direction:column;gap:9px}
+.rt-bal{display:flex;gap:22px;background:#fff;border:1px solid #E4E9EC;border-radius:9px;padding:10px 14px}
+.rt-bal b{display:block;font-family:"IBM Plex Mono",monospace;font-size:16px;font-weight:600}
+.rt-bal small{text-transform:uppercase;letter-spacing:.09em;color:#84919A;font-size:9.5px}
+.rt-h{margin:0;text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:.04em}
+.rt-r{display:grid;grid-template-columns:120px 1fr 50px;gap:9px;align-items:center;background:#fff;border:1px solid #E4E9EC;border-radius:7px;padding:6px 9px}
+.rt-r i{height:9px;border-radius:2px;background:#0D6B5C;box-shadow:inset 0 0 0 999px #0D6B5C}
+.rt-r em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:10px;text-align:center;border-radius:4px;padding:1px 0;color:#84919A}
+.rt-r em.ok{background:#E6F2EF;color:#0D6B5C}.rt-r em.bad{background:#FBECEB;color:#A1352F}
+
+
+
+@media (max-width:900px){
+  .hero,.about,.sys,.two{grid-template-columns:1fr}
+  .stage{width:min(360px,100%)}
+  .cards,.grid,.reach{grid-template-columns:1fr 1fr}
+  .cases{grid-template-columns:1fr}
+  .look{columns:1}
+}
+@media (max-width:900px){
+  .sys-copy::after{content:"Swipe the screen sideways to see all of it \2192";font-size:12.5px;font-weight:600;color:var(--muted)}
+}
+@media (max-width:640px){
+  /* Phones: one slim sticky bar; the section links scroll sideways and Contact joins them */
+  .nav{gap:8px;padding:6px 6px 6px 8px}
+  .logo{font-size:16px;gap:8px;flex:none}
+  .logo i{width:30px;height:30px}
+  .links{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:18px}
+  .links a{padding:6px 8px}
+  .links a.phone{display:inline-block}
+  .cta{display:none}
+  .cards,.grid,.reach{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(3,1fr);gap:10px 18px}
+  .badge{width:76px;height:76px}
+}
+
+/* Motion: hero load sequence, floating photo, rotating badge, moving band, scroll reveals.
+   All of it is off for viewers who ask for reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @keyframes float{50%{transform:translateY(-8px)}}
+  @keyframes morph{50%{border-radius:58% 42% 50% 50%/48% 40% 34% 34%}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  .hero .copy > *{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero .copy > *:nth-child(2){animation-delay:.08s}
+  .hero .copy > *:nth-child(3){animation-delay:.16s}
+  .hero .copy > *:nth-child(4){animation-delay:.24s}
+  .stage{animation:rise 1s .2s cubic-bezier(.2,.7,.2,1) both}
+  .blob{animation:morph 9s ease-in-out infinite}
+  .chip.g{animation:float 5s 1s ease-in-out infinite}
+  .chip.y{animation:float 5.5s .4s ease-in-out infinite}
+  .badge svg.txt{animation:spin 14s linear infinite}
+  .band .track{animation:slide 28s linear infinite}
+  .band:hover .track{animation-play-state:paused}
+  @supports (animation-timeline:view()){
+    @keyframes reveal{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+    @keyframes grow{from{transform:scaleY(.12)}to{transform:none}}
+    .sec-head,.card,.sys,.grid article,.case,.tl div,.tool,.reach div,.about > div{
+      animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+    .mk svg rect{transform-box:fill-box;transform-origin:50% 100%;
+      animation:grow linear both;animation-timeline:view();animation-range:entry 20% cover 45%}
+  }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-ledger" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 13l-2 2 2 2M15 13l2 2-2 2"/></symbol>
+  <symbol id="i-deal" viewBox="0 0 24 24"><path d="M3 12l4-4 5 3 5-3 4 4-9 7z"/></symbol>
+</svg>
+
+<header class="top wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="#home"><i>R</i>Ritchie<b>.</b></a>
+    <div class="links">
+      <a href="#home" class="on">Home</a><a href="#services">What I do</a><a href="#about">About</a><a href="#portfolio">Systems</a><a href="#results">Results</a><a href="#resume">Experience</a><a href="#contact" class="phone">Contact</a>
+    </div>
+    <a class="cta" href="#contact">Contact me</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero" id="home">
+    <div class="copy">
+      <div class="hello"><i></i><i></i><i></i><i></i>Hello there!</div>
+      <h1>I'm <span class="hl">Ritchie Steelson,</span><br>Accounting Operations Manager<br>Based in Auckland.</h1>
+      <p class="lede">I run the whole finance function for a group of five companies, including a 20+ store QSR network, single-handed. Along the way I've designed and shipped the reporting, rostering and ordering systems the group now runs on.</p>
+      <div class="acts">
+        <a class="btn solid" href="#portfolio">View my work <span class="dot"><svg><use href="#i-play"/></svg></span></a>
+        <a class="btn ghost" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="ring"></div>
+      <div class="fig"><div class="blob"></div><img class="portrait" src="photo-cutout.png" alt="Ritchie Steelson"></div>
+      <span class="chip g">Finance systems</span>
+      <span class="chip y">Xero · GST · Reporting</span>
+      <a class="badge" href="#portfolio" aria-label="See the systems">
+        <svg class="txt" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="circ" d="M50 50 m-36 0 a36 36 0 1 1 72 0 a36 36 0 1 1 -72 0"/></defs><text><textPath href="#circ">SEE THE SYSTEMS · SEE THE SYSTEMS ·</textPath></text></svg>
+        <span><svg><use href="#i-ne"/></svg></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="band" aria-hidden="true">
+    <div class="track"><span>Accounting Operations</span><span>Month-End Close</span><span>GST &amp; PAYE</span><span>Management Reporting</span><span>Franchise Accounts</span><span>Web Apps</span><span>Rostering</span><span>Xero API</span><span>Accounting Operations</span><span>Month-End Close</span><span>GST &amp; PAYE</span><span>Management Reporting</span><span>Franchise Accounts</span><span>Web Apps</span><span>Rostering</span><span>Xero API</span></div>
+  </div>
+
+  <section id="services" class="wrap" aria-labelledby="t-services">
+    <div class="sec-head"><div class="kicker">What I do</div><h2 id="t-services"><span class="hl">Work</span> I Do</h2></div>
+    <div class="cards">
+      <div class="card"><div class="ic"><svg><use href="#i-ledger"/></svg></div><h3>Accounting Operations</h3><p>AP, AR, franchise royalties, month-end close, GST, payroll oversight and cash across five companies in Xero.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-code"/></svg></div><h3>Finance Systems</h3><p>Web apps for reporting, rostering, ordering and accounting, built with Claude and hosted on our own domains.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-deal"/></svg></div><h3>Commercial Work</h3><p>Leases, bank facilities, supplier pricing and debt recovery.</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="green" aria-labelledby="t-about">
+    <div class="wrap about">
+      <div class="disc">
+        <img src="photo.png" alt="">
+        <div class="tags"><span>Xero</span><span>Month-end</span><span>GST</span><span>Reporting</span><span>Web apps</span><span>Rostering</span></div>
+      </div>
+      <div>
+        <div class="kicker">About me</div>
+        <h2 id="t-about">Who is <span class="hl">Ritchie?</span></h2>
+        <p>I'm Abijith Ritchie Steelson. I started on the store floor as a manager and moved into the accounts in 2020. Today I'm the sole accountant for five companies: a 20+ store QSR network, commercial property, property development and outdoor living. When the reporting I needed didn't exist, I built it.</p>
+        <div class="stats">
+          <div><b data-count>5+</b><small>Years in finance</small></div>
+          <div><b data-count>5</b><small>Companies</small></div>
+          <div><b data-count>12</b><small>Systems built</small></div>
+        </div>
+        <div style="margin-top:28px"><a class="btn solid" href="#portfolio">View my work <span class="dot"><svg><use href="#i-arrow"/></svg></span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="wrap" aria-labelledby="t-portfolio">
+    <div class="row-head">
+      <div class="sec-head" style="margin-bottom:0"><div class="kicker">Portfolio</div><h2 id="t-portfolio">Systems I've <span class="hl">Built</span></h2></div>
+      <div class="filters" role="group" aria-label="Filter systems">
+        <button type="button" class="on" data-f="all">All</button><button type="button" data-f="live">Live</button><button type="button" data-f="dev">In development</button><button type="button" data-f="internal">Internal tools</button>
+      </div>
+    </div>
+    <p class="note">Screens are redrawn in each system's own design with made-up numbers and names. Real company data stays private.</p>
+    <div class="works">
+    <!-- 1. Group reporting platform -->
+    <article class="sys" data-cat="live">
+      <div class="sys-copy">
+        <span class="pill">Live · used by management</span>
+        <h3>Group reporting platform</h3>
+        <p>Every company's reports behind one sign-in: P&amp;L by place, receivables, cash position, labour cost, supplier spend and rebates. Each person sees only the sections they're allowed to.</p>
+        <ul class="facts-list"><li>Connected to Xero, with uploads for everything else</li><li>Month-on-month and year-on-year comparison</li><li>Printable report packs</li></ul>
+      </div>
+      <div class="scroller"><div class="mk mk-ms">
+        <aside><div class="ms-brand"><i></i><div><b>Reporting</b><small>Group finance</small></div></div>
+          <div class="ms-sel">All companies ▾</div>
+          <p class="ms-g">Overview</p><span class="on">Dashboard</span>
+          <p class="ms-g">Financials</p><span>P&amp;L report</span><span>Cash position</span><span>Labour cost</span>
+          <p class="ms-g">Receivables &amp; payables</p><span>Accounts receivable</span><span>Supplier spend</span>
+          <div class="ms-sync"><em></em>Data sources up to date</div></aside>
+        <div class="ms-main">
+          <div class="ms-top"><div><h4>Management overview</h4><small>All places · Jan–Sep · sample data</small></div><div class="ms-btns"><span>01 Jan – 30 Sep ▾</span><span>Refresh</span><span class="g">Export</span></div></div>
+          <div class="ms-kpis">
+            <div><small>Sales</small><b>$2.41M</b><em class="up">▲ 4.2%</em></div>
+            <div><small>Cost of sales</small><b>$1.07M</b><em>44.4% of sales</em></div>
+            <div><small>Net profit</small><b>$118.6k</b><em class="up">▲ 11%</em></div>
+            <div><small>Receivables</small><b>$64.3k</b><em class="dn">▲ 8 overdue</em></div>
+          </div>
+          <div class="ms-row">
+            <div class="ms-card"><p class="ms-h">Sales and net profit by month</p>
+              <svg viewBox="0 0 300 120" aria-hidden="true"><g fill="#86C99B"><rect x="8" y="40" width="20" height="70"/><rect x="41" y="52" width="20" height="58"/><rect x="74" y="44" width="20" height="66"/><rect x="107" y="34" width="20" height="76"/><rect x="140" y="28" width="20" height="82"/><rect x="173" y="42" width="20" height="68"/><rect x="206" y="38" width="20" height="72"/><rect x="239" y="36" width="20" height="74"/><rect x="272" y="30" width="20" height="80"/></g><polyline points="18,92 51,100 84,90 117,84 150,78 183,88 216,82 249,80 282,70" fill="none" stroke="#B45309" stroke-width="2"/><g fill="#fff" stroke="#B45309" stroke-width="1.5"><circle cx="18" cy="92" r="3"/><circle cx="117" cy="84" r="3"/><circle cx="216" cy="82" r="3"/><circle cx="282" cy="70" r="3"/></g><line x1="0" y1="110" x2="300" y2="110" stroke="#EDF1EE"/></svg></div>
+            <div class="ms-card"><p class="ms-h">P&amp;L by place</p>
+              <table><tr><th>Place</th><th>Sales</th><th>Net profit</th><th>Margin</th></tr>
+              <tr><td>Store 01</td><td>$412k</td><td>$31.2k</td><td>7.6%</td></tr>
+              <tr><td>Store 02</td><td>$388k</td><td>$22.9k</td><td>5.9%</td></tr>
+              <tr><td>Store 03</td><td>$301k</td><td class="neg">−$4.1k</td><td class="neg">−1.4%</td></tr>
+              <tr class="net"><td>All places</td><td>$2.41M</td><td>$118.6k</td><td>4.9%</td></tr></table></div>
+          </div>
+        </div>
+      </div></div>
+    </article>
+
+    <!-- 2. Accounting and reporting platform (in development) -->
+    <article class="sys" data-cat="dev">
+      <div class="sys-copy">
+        <span class="pill built">In development</span>
+        <h3>Accounting and reporting platform</h3>
+        <p>A self-hosted system that replaces the group's reporting Excel workbooks: P&amp;L per store, cash reports, supplier payments, receivables from Xero and store payments, in one place.</p>
+        <ul class="facts-list"><li>Imports the old workbooks so history isn't lost</li><li>Flags what needs attention each month</li><li>Runs on the company's own server</li></ul>
+      </div>
+      <div class="scroller"><div class="mk mk-mf">
+        <aside><div class="mf-brand"><i>M</i><b>Finance</b></div>
+          <span class="on">Dashboard</span><span>Stores <em>12</em></span><span>Franchisees</span><span>Suppliers</span><span>Cash &amp; Bank</span><span>GST &amp; Tax</span><span>Reports</span></aside>
+        <div class="mf-main">
+          <div class="mf-top"><small>Home /</small><h4>Dashboard</h4></div>
+          <div class="mf-filter"><span class="on">2026</span><span>2025</span><span class="sel">September ▾</span></div>
+          <div class="mf-hero"><div><small>Net profit, all stores, 2026 to end of September</small><b>$118,640</b><small>4.9% of sales revenue</small></div>
+            <dl><dt>Sales revenue</dt><dd>$2,412,300</dd><dt>Total expenses</dt><dd>$2,293,660</dd></dl></div>
+          <div class="mf-tiles">
+            <div><small>Sales revenue · month</small><b>$274,900</b><em class="up">▲ 3.1% vs Aug</em></div>
+            <div><small>Cash variance</small><b>−$42.10</b><em class="dn">▼ vs Aug</em></div>
+            <div><small>Unpaid supplier bills</small><b>$18,420</b><em>6 bills</em></div>
+          </div>
+          <div class="mf-chart"><small>Sales revenue by month · 2026</small>
+            <svg viewBox="0 0 300 70" aria-hidden="true"><g fill="#BCD6F3"><rect x="4" y="22" width="18" height="44"/><rect x="29" y="28" width="18" height="38"/><rect x="54" y="24" width="18" height="42"/><rect x="79" y="18" width="18" height="48"/><rect x="104" y="14" width="18" height="52"/><rect x="129" y="24" width="18" height="42"/><rect x="154" y="20" width="18" height="46"/><rect x="179" y="19" width="18" height="47"/></g><rect x="204" y="12" width="18" height="54" fill="#2a78d6"/><g fill="none" stroke="#d3d7de" stroke-dasharray="3 2"><rect x="229" y="40" width="18" height="26"/><rect x="254" y="40" width="18" height="26"/><rect x="279" y="40" width="17" height="26"/></g></svg></div>
+        </div>
+      </div></div>
+    </article>
+
+    <!-- 3. Roster -->
+    <article class="sys" data-cat="live">
+      <div class="sys-copy">
+        <span class="pill">Live · all company stores</span>
+        <h3>Roster and wages system</h3>
+        <p>Each store sets the week's sales forecast, taken from the average of its recent weeks' actual sales, and a wage cap. Generate roster then fills the whole week inside that cap. Managers adjust it on the grid, and head office sees every store before payroll.</p>
+        <ul class="facts-list"><li>Learns a store's preferred shift pattern and follows it next time</li><li>Keeps a rest gap between a late close and an early start</li><li>Labour % against the cap updates as shifts change</li><li>Replaced a paid per-seat rostering tool</li></ul>
+      </div>
+      <div class="scroller"><div class="mk mk-cd">
+        <aside><div class="cd-brand"><i><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="6" cy="7" r="2.4" fill="#F08A1C"/><circle cx="12" cy="6" r="2.6" fill="#C8102E"/><circle cx="18" cy="7" r="2.4" fill="#F08A1C"/><path d="M3 18c0-3 1.5-6 3-6s2 1 3 1M21 18c0-3-1.5-6-3-6s-2 1-3 1M8 19c0-4 2-7 4-7s4 3 4 7" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round"/></svg></i><b>Roster</b></div>
+          <span class="on">Make roster</span><span>Week at a glance</span><span>Cash</span><span>Cleaning</span><span>Staff</span><span>History</span></aside>
+        <div class="cd-main">
+          <div class="cd-top"><b>Good morning, Sam</b><small>Mon 19 Oct</small><em>● Saved 9:42</em><span class="cd-sw"><i></i></span></div>
+          <div class="cd-card"><h4>Make roster</h4><small>Week ending Sun 25 Oct · Store 04</small></div>
+          <div class="cd-fc"><span>Sales forecast <b>$28,400</b></span><span class="cd-sec">↻ Set forecast from recent sales</span><span>Wage cap <b>$6,200</b></span></div>
+          <div class="cd-kpis"><div><b>214</b><small>hours rostered</small></div><div><b>$5,820</b><small>total wages</small></div><div><b class="ok">20.5%</b><small>labour % · cap 21.8%</small></div><div><b>$0</b><small>leave pay</small></div></div>
+          <div class="cd-tools"><span class="cd-gen">Generate roster</span><span class="cd-sec">↶ Undo</span><span class="cd-sec">Whole roster card</span><span class="cd-dark">✔ Submit roster</span></div>
+          <div class="cd-learn">☑ Use my <b>learned shift pattern</b> when I press Generate <span class="cd-lb">Learn this shift</span><small>Pattern saved (34 shifts). ON</small></div>
+          <div class="cd-grid">
+            <div class="h"></div><div class="h">Mon</div><div class="h today">Tue</div><div class="h">Wed</div><div class="h">Thu</div><div class="h">Fri</div><div class="h we">Sat</div>
+            <div class="n">Staff A</div><div class="s mgr"><i>MGR</i>10:00–18:00</div><div class="s mgr today"><i>MGR</i>10:00–18:00</div><div class="x"></div><div class="s mgr"><i>MGR</i>10:00–18:00</div><div class="s mgr"><i>MGR</i>14:00–22:00</div><div class="s mgr we"><i>MGR</i>14:00–22:00</div>
+            <div class="n">Staff B</div><div class="s foh"><i>FOH</i>11:00–15:00</div><div class="s foh today"><i>FOH</i>11:00–15:00</div><div class="s foh"><i>FOH</i>17:00–22:00</div><div class="lv">Leave</div><div class="s foh"><i>FOH</i>17:00–23:00</div><div class="s foh we"><i>FOH</i>11:00–19:00</div>
+            <div class="n">Staff C</div><div class="x"></div><div class="s boh today"><i>BOH</i>16:00–23:00</div><div class="s boh"><i>BOH</i>16:00–23:00</div><div class="s boh"><i>BOH</i>16:00–23:00</div><div class="s boh"><i>BOH</i>16:00–00:00</div><div class="x we"></div>
+          </div>
+        </div>
+      </div></div>
+    </article>
+
+    <!-- 4. Team workspace -->
+    <article class="sys" data-cat="live">
+      <div class="sys-copy">
+        <span class="pill">Live · head office team</span>
+        <h3>Team workspace</h3>
+        <p>Tasks, a kanban board, projects, a shared calendar, polls and files for a team of about 20, installable on phones.</p>
+        <ul class="facts-list"><li>Quick-add tasks with labels and due dates</li><li>Workload and deadlines at a glance</li><li>Light and dark modes</li></ul>
+      </div>
+      <div class="scroller"><div class="mk mk-oh">
+        <div class="oh-top"><b>Good evening!</b><span>Search tasks, labels or people…</span></div>
+        <div class="oh-add"><span>Add a task… #label @person due:fri</span><em>Add task</em></div>
+        <div class="oh-stats">
+          <div><i style="background:#E7ECFF;color:#5B7CFA">●</i><small>Open tasks</small><b>38</b></div>
+          <div><i style="background:#DDF5F2;color:#14B8A6">●</i><small>Completed this week</small><b>21</b></div>
+          <div><i style="background:#FDEEDD;color:#F08C2E">●</i><small>Due in 7 days</small><b>9</b></div>
+          <div><i style="background:#EEEAFF;color:#6E56F8">●</i><small>Team members</small><b>18</b></div>
+        </div>
+        <div class="oh-row">
+          <div class="oh-card"><p>Task overview</p><svg viewBox="0 0 100 100" width="96" height="96" aria-hidden="true"><circle cx="50" cy="50" r="36" fill="none" stroke="#5B7CFA" stroke-width="14" stroke-dasharray="70 226"/><circle cx="50" cy="50" r="36" fill="none" stroke="#F08C2E" stroke-width="14" stroke-dasharray="50 226" stroke-dashoffset="-70"/><circle cx="50" cy="50" r="36" fill="none" stroke="#D946A8" stroke-width="14" stroke-dasharray="30 226" stroke-dashoffset="-120"/><circle cx="50" cy="50" r="36" fill="none" stroke="#14B8A6" stroke-width="14" stroke-dasharray="76 226" stroke-dashoffset="-150"/><text x="50" y="55" text-anchor="middle" font-size="16" font-weight="800" fill="#1D1A2B">59</text></svg></div>
+          <div class="oh-card"><p>Upcoming deadlines</p><ul><li><em style="background:#E5484D"></em>Month-end close<span>Due today</span></li><li><em style="background:#F08C2E"></em>Supplier statements<span>In 2 days</span></li><li><em style="background:#5B7CFA"></em>Store audit checklist<span>In 5 days</span></li></ul></div>
+        </div>
+      </div></div>
+    </article>
+
+    <!-- 5. Company portal -->
+    <article class="sys" data-cat="dev">
+      <div class="sys-copy">
+        <span class="pill built">In development</span>
+        <h3>Company portal</h3>
+        <p>One sign-in to every company app, with a personal day view, a synced calendar, a team feed, sticky notes and people access in one place. Designed as the front door to the other systems.</p>
+        <ul class="facts-list"><li>"Your day" with what needs you next</li><li>App launcher with role-based access</li><li>Several looks, plus dark mode</li></ul>
+      </div>
+      <div class="scroller"><div class="mk mk-pt">
+        <div class="pt-top"><b>Portal</b><div class="pt-bar"><span class="on">Home</span><span><em style="background:#4a63d8"></em>Reporting</span><span><em style="background:#d9822b"></em>Roster</span><span><em style="background:#2f9e7a"></em>Ordering</span></div></div>
+        <h4>Kia ora, Sam</h4>
+        <div class="pt-row">
+          <div class="pt-card"><small>THURSDAY 22 OCTOBER</small><div class="pt-next"><b>10:30</b><span>Supplier review<br><small>Head office</small></span></div>
+            <p class="pt-l">Needs you</p><div class="pt-need"><em style="background:#c9453c"></em>3 invoices to approve<span>Review</span></div><div class="pt-need"><em style="background:#c58a1c"></em>Roster for week 44<span>Open</span></div></div>
+          <div class="pt-apps"><div><i style="background:#4a63d8">R</i><b>Reporting</b><small>Group P&amp;L and cash</small></div><div><i style="background:#d9822b">R</i><b>Roster</b><small>Shifts and wages</small></div><div><i style="background:#2f9e7a">O</i><b>Ordering</b><small>Store orders</small></div><div><i style="background:#8e6bd8">W</i><b>Workspace</b><small>Tasks and polls</small></div></div>
+        </div>
+      </div></div>
+    </article>
+
+    <!-- 6. Property ledger -->
+    <article class="sys" data-cat="internal">
+      <div class="sys-copy">
+        <span class="pill built">Internal</span>
+        <h3>Property ledger</h3>
+        <p>Tracks commercial tenancies, matches the managing agent's statements against the bank, and shows what was collected and what is owed, month by month.</p>
+        <ul class="facts-list"><li>Every space and tenancy in one view</li><li>Flags short and late rent</li><li>Keeps the GST position clear</li></ul>
+      </div>
+      <div class="scroller"><div class="mk mk-rt">
+        <aside><b>Property</b><span class="on">Overview</span><span>Tenancies <em>6</em></span><span>Statements</span><span>Bank</span><span>Arrears <em class="w">1</em></span></aside>
+        <div class="rt-main"><h4>Overview</h4>
+          <div class="rt-bal"><div><b>$31,450</b><small>Collected</small></div><div><b>$2,100</b><small>Outstanding</small></div><div><b>5 / 6</b><small>Occupied</small></div><div><b>$4,880</b><small>Money out</small></div></div>
+          <p class="rt-h">Every space, this month</p>
+          <div class="rt-r"><span>Unit 1 · Café</span><i style="width:100%"></i><em class="ok">Paid</em></div>
+          <div class="rt-r"><span>Unit 2 · Office</span><i style="width:100%"></i><em class="ok">Paid</em></div>
+          <div class="rt-r"><span>Unit 3 · Retail</span><i style="width:40%"></i><em class="bad">Short</em></div>
+          <div class="rt-r"><span>Unit 4 · Office</span><i style="width:0%"></i><em>Empty</em></div></div>
+      </div></div>
+    </article>
+
+    </div>
+    <div class="grid">
+      <article data-cat="live"><span class="pill">Live</span><h3>Store ordering platform</h3><p>Stores order from a fixed catalogue for a supplier with no system of its own. The warehouse gets one pick list and the order email goes out automatically.</p><div class="who">Web app · warehouse back end</div></article>
+      <article data-cat="live"><span class="pill">Live</span><h3>Accounting system for one business</h3><p>Replaced Xero for one of the smaller businesses: ledger, invoicing, GST and reporting, built and run in-house.</p><div class="who">Web app · GST</div></article>
+      <article data-cat="live"><span class="pill">Live</span><h3>QSR operations software</h3><p>Designed and helped build the network's operations software, from warehousing through to the store back end and admin panel.</p><div class="who">Product design · warehouse · admin</div></article>
+      <article data-cat="live"><span class="pill">Live</span><h3>Daily operations brief</h3><p>The first hour of every day went on the same checks. An automation now gathers the overnight position and files one written brief into Notion each morning.</p><div class="who">Automation · Notion · Xero</div></article>
+      <article data-cat="dev"><span class="pill built">Internal</span><h3>Royalty and purchasing analysis</h3><p>Three years of royalty and levy history with adjustable rates, per-store drill-down and supplier purchases split by currency, so persistent shortfalls show up.</p><div class="who">Xero · JavaScript · Excel</div></article>
+      <article data-cat="dev"><span class="pill built">Internal</span><h3>Supplier price tracking</h3><p>Line-by-line reconciliation against an agreed price of record, plus like-for-like comparison of overseas quotes in different units and currencies.</p><div class="who">Excel · dashboard</div></article>
+      <article data-cat="dev"><span class="pill built">Internal</span><h3>Manufacturing costing model</h3><p>A raw materials master linked to a bill of materials per product, flowing to unit cost, target margin and selling price. Change one rate and everything recalculates.</p><div class="who">Excel · BOM model</div></article>
+      <article data-cat="live"><span class="pill">Live</span><h3>Gmail-to-Notion add-on</h3><p>A Gmail sidebar that files supplier statements, payment schedules, to-dos and notes into Notion.</p><div class="who">Gmail add-on · Notion</div></article>
+      <article data-cat="dev"><span class="pill built">Internal</span><h3>Card terminal data pull</h3><p>Pulls card-terminal transactions into a spreadsheet so store settlements reconcile quickly.</p><div class="who">Automation · Excel</div></article>
+      <article data-cat="dev"><span class="pill built">Internal</span><h3>Property development dashboard</h3><p>A running view of build cost against feasibility, residual land value and margin, instead of a spreadsheet revisited now and then.</p><div class="who">HTML · Sheets</div></article>
+      <article data-cat="dev"><span class="pill built">Internal</span><h3>GST reconciliation tool</h3><p>Xero-style GST reconciliation for a property company, refined over eight-plus versions.</p><div class="who">Finance</div></article>
+      <article data-cat="internal"><span class="pill built">Public</span><h3>NZ payroll calculator</h3><p>Income tax, ACC levy, KiwiSaver and student loan, showing take-home pay and employer cost side by side as the pay rate changes.</p><div class="who">JavaScript · IRD rates</div></article></div>
+  </section>
+
+  <section id="results" class="green" aria-labelledby="t-results">
+    <div class="wrap">
+      <div class="sec-head"><div class="kicker">Results</div><h2 id="t-results">What the work has <span class="hl">Delivered</span></h2></div>
+      <div class="cases">
+      <div class="case"><h3>About NZD 70,000</h3><p>Found long-standing royalty overcharging by the master franchisor that predated my time. The refund came back with a renegotiated, market-based currency conversion rate that keeps cutting ongoing costs.</p></div>
+      <div class="case"><h3>$300–$600 per store, across 15 stores</h3><p>Caught a supplier charging above the agreed cost price, recovered the difference and tightened reconciliation controls so it can't recur.</p></div>
+      <div class="case"><h3>About 3% higher gross margin</h3><p>Built food-cost structures and menu and inventory pricing with operations, so pricing follows cost instead of instinct.</p></div>
+      <div class="case"><h3>Paid tools replaced in-house</h3><p>Replaced a paid per-seat rostering tool and several disconnected systems, and took one business off Xero. Buying comparable off-the-shelf tools would cost roughly NZD 37,000 or more a year (estimate from vendors' public pricing, Oct 2026). Month-end reporting also closes about 2 days sooner.</p></div></div>
+      <h3 class="sub">Commercial work</h3>
+      <div class="cases">
+      <div class="case"><h3>Two franchisee defaults, handled end to end</h3><p>Moved one franchisee to cash-on-purchase supply. Suspended supply to the other and instructed lawyers on franchise termination.</p></div>
+      <div class="case"><h3>Two commercial leases negotiated</h3><p>Secured fit-out removal rights and changed commencement dates to match store opening plans.</p></div>
+      <div class="case"><h3>Guarantee instead of a cash deposit</h3><p>Arranged a bank guarantee in place of a landlord deposit for a new store. Prepared the group portfolio for a revolving credit facility.</p></div>
+      <div class="case"><h3>Australian joint venture model</h3><p>Modelled a 70/30 joint venture to take a group company into Australia, covering capital, cost split and ownership.</p></div>
+      <div class="case"><h3>Serviced-office takeover</h3><p>Took over a commercial serviced-office property, restructured its expense payments and audited tenant records after the handover.</p></div>
+      <div class="case"><h3>Supplier tenders and fair cost allocation</h3><p>Compared local and overseas packaging and ran a pantry supplier tender. Designed a monthly method to bill shared digital marketing to each branch.</p></div></div>
+      <p class="note">Names and figures of counterparties are left out.</p>
+    </div>
+  </section>
+
+  <section id="resume" class="wrap" aria-labelledby="t-resume">
+    <div class="sec-head"><div class="kicker">Resume</div><h2 id="t-resume">Experience &amp; <span class="hl">Education</span></h2></div>
+    <div class="two">
+      <div>
+        <h3 class="col-title">Experience</h3>
+        <div class="tl">
+          <div><span class="when">Sep 2020 – now</span><h3>Accounting Operations Manager · A&amp;A Associates</h3><p>Sole accountant for five companies, Auckland.</p></div>
+          <div><span class="when">2019 – 2020</span><h3>Store Manager · QSR franchise</h3><p>Rosters, stock, cash-ups and sales reporting for a single store.</p></div>
+          <div><span class="when">2018</span><h3>Accounts Assistant · Hotel All Seasons</h3><p>Invoices, journals, reconciliations, P&amp;L and tax filings. Kerala, India.</p></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="col-title">Education</h3>
+        <div class="tl">
+          <div><span class="when">NZ Level 7</span><h3>Graduate Diploma in Accounting</h3><p>Manukau Institute of Technology, Auckland</p></div>
+          <div><span class="when">Degree</span><h3>Bachelor of Commerce (Accounting)</h3><p>Madurai Kamaraj University, India</p></div>
+        </div>
+        <h3 class="col-title" style="margin-top:30px">What I look after</h3>
+        <ul class="look">
+      <li>Accounts payable and supplier payment scheduling across all group entities</li>
+      <li>Franchise receivables: royalty and marketing levy billing and collection</li>
+      <li>Returns and reconciliations for multiple entities, including import GST and bad-debt write-offs</li>
+      <li>Store P&amp;Ls, weekly flash reports, monthly management packs</li>
+      <li>Payroll data consolidation across companies in two cities</li>
+      <li>Weekly store cash collection, delivery-platform settlement reconciliations</li>
+      <li>Accounts and facilities for every group company under one banking relationship</li>
+      <li>Running one company on an in-house accounting platform that replaced Xero</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools" class="wrap" aria-labelledby="t-tools" style="padding-top:0">
+    <div class="sec-head center"><div class="kicker">My everyday tools</div><h2 id="t-tools"><span class="hl">Exploring the Tools</span><br>Behind My Work</h2></div>
+    <div class="toolrow"><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#13B5EA" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.585 14.655c-1.485 0-2.69-1.206-2.69-2.689 0-1.485 1.207-2.691 2.69-2.691 1.485 0 2.69 1.207 2.69 2.691s-1.207 2.689-2.69 2.689zM7.53 14.644c-.099 0-.192-.041-.267-.116l-2.043-2.04-2.052 2.047c-.069.068-.16.108-.258.108-.202 0-.368-.166-.368-.368 0-.099.04-.191.111-.263l2.04-2.05-2.038-2.047c-.075-.069-.113-.162-.113-.261 0-.203.166-.366.368-.366.098 0 .188.037.258.105l2.055 2.048 2.048-2.045c.069-.071.162-.108.26-.108.211 0 .375.165.375.366 0 .098-.029.188-.104.258l-2.056 2.055 2.055 2.051c.068.069.104.16.104.258 0 .202-.165.368-.365.368h-.01zm8.017-4.591c-.796.101-.882.476-.882 1.404v2.787c0 .202-.165.366-.366.366-.203 0-.367-.165-.368-.366v-4.53c0-.204.16-.366.362-.366.166 0 .316.125.346.289.27-.209.6-.317.93-.317h.105c.195 0 .359.165.359.368 0 .201-.164.352-.375.359 0 0-.09 0-.164.008l.053-.002zm-3.091 2.205H8.625c0 .019.003.037.006.057.02.105.045.211.083.31.194.531.765 1.275 1.829 1.29.33-.003.631-.086.9-.229.21-.12.391-.271.525-.428.045-.058.09-.112.12-.168.18-.229.405-.186.54-.083.164.135.18.391.045.57l-.016.016c-.21.27-.435.495-.689.66-.255.164-.525.284-.811.345-.33.09-.645.104-.975.06-1.095-.135-2.01-.93-2.28-2.01-.06-.21-.09-.42-.09-.645 0-.855.421-1.695 1.125-2.205.885-.615 2.085-.66 3-.075.63.405 1.035 1.021 1.185 1.771.075.419-.21.794-.734.81l.068-.046zm6.129-2.223c-1.064 0-1.931.865-1.931 1.931 0 1.064.866 1.931 1.931 1.931s1.931-.867 1.931-1.931c0-1.065-.866-1.933-1.931-1.933v.002zm0 2.595c-.367 0-.666-.297-.666-.666 0-.367.3-.665.666-.665.367 0 .667.299.667.665 0 .369-.3.667-.667.666zm-8.04-2.603c-.91 0-1.672.623-1.886 1.466v.03h3.776c-.203-.855-.973-1.494-1.891-1.494v-.002z"/></svg></i>Xero</div><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#217346" d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7V18H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.8H7.46l-1.3 2.4-.05.08-.04.09-.64-1.28-.66-1.29H2.59l2.27 3.82-2.48 3.85h2.16zM14.25 21v-3H7.5v3zm0-4.5v-3.75H12v3.75zm0-5.25V7.5H12v3.75zm0-5.25V3H7.5v3zm8.25 15v-3h-6.75v3zm0-4.5v-3.75h-6.75v3.75zm0-5.25V7.5h-6.75v3.75zm0-5.25V3h-6.75v3Z"/></svg></i>Excel</div><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M11.318 12.545H7.91v-1.909h3.41v1.91zM14.728 0v6h6l-6-6zm1.363 10.636h-3.41v1.91h3.41v-1.91zm0 3.273h-3.41v1.91h3.41v-1.91zM20.727 6.5v15.864c0 .904-.732 1.636-1.636 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.318v6.5h6.5zm-3.273 2.773H6.545v7.909h10.91v-7.91zm-6.136 4.636H7.91v1.91h3.41v-1.91z"/></svg></i>Google Sheets</div><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M12.363 2.54a3.136 3.136 0 0 0-.376.022 2.864 2.864 0 0 0-1.589.828c-.562.58-.82 1.115-.773 1.943-.01.264.193 1.023.272 1.274 1.115 3.546 2.09 6.75 3.26 10.279.08.246.168.486.267.72.02.047.035.046.048-.004.077-.297.174-.612.29-.945.894-2.576 1.772-5.14 2.633-7.696a.345.345 0 0 0 .004-.217 163.054 163.054 0 0 0-1.49-4.572 2.603 2.603 0 0 0-.704-.933c-.55-.46-1.166-.694-1.842-.7Zm9.078.117a2.734 2.734 0 0 0-2.878 1.828l-4.576 13.289a2.734 2.734 0 0 0 1.695 3.475l.12.04a2.734 2.734 0 0 0 3.475-1.694L23.85 6.307a2.734 2.734 0 0 0-1.695-3.476c-.233-.1-.506-.124-.716-.174ZM12.375 3.96a1.396 1.396 0 1 1 0 2.791 1.395 1.395 0 0 1 0-2.79zm8.809.07a1.402 1.402 0 1 1 0 2.803 1.402 1.402 0 0 1 0-2.803zM5.419 7.605a2.853 2.853 0 0 0-.468.052 2.683 2.683 0 0 0-1.337.627 2.62 2.62 0 0 0-.924 1.833 3.808 3.808 0 0 0 0 .648 2.52 2.52 0 0 0 .673 1.52c.221.238.465.454.732.648 3.043 2.21 6.08 4.43 9.108 6.664a.78.78 0 0 0 .158.089c.03-.043.032-.098.007-.167a17.409 17.409 0 0 0-.317-1.066 532.752 532.752 0 0 1-2.02-6.251 41.91 41.91 0 0 0-.497-1.477c-.967-.849-2.078-1.6-3.023-2.302A3.848 3.848 0 0 0 6.153 7.7a2.388 2.388 0 0 0-.734-.094Zm.02 1.424a1.398 1.398 0 1 1 0 2.796 1.398 1.398 0 0 1 0-2.796zm-2.458 6.792c-.733-.006-1.375.202-1.927.622a2.72 2.72 0 0 0-.95 1.45 2.78 2.78 0 0 0-.09 1.04 2.74 2.74 0 0 0 .695 1.583c.664.578 1.26.85 2 .945 1.42-.005 2.84-.012 4.262-.02h.418c2.277-.003 4.513-.002 6.706.003.148.005.28.003.392-.01.06-.005.091-.031.092-.077a10.656 10.656 0 0 0-.834-.653 488.746 488.746 0 0 1-6.57-4.815.236.236 0 0 0-.14-.047c-1.34-.003-2.691-.01-4.054-.02zm-.19 1.418a1.402 1.402 0 1 1 0 2.803 1.402 1.402 0 0 1 0-2.803zm13.874.002a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"/></svg></i>Apps Script</div><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E34F26" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg></i>HTML</div><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E3B800" d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg></i>JavaScript</div><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#111111" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg></i>Notion</div><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#181717" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></i>GitHub</div><div class="tool"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg></i>Claude</div></div>
+  </section>
+
+  <section id="contact" class="green" aria-labelledby="t-contact">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0"><div class="kicker">Contact</div><h2 id="t-contact">Let's <span class="hl">Talk</span></h2><p style="color:var(--on-green-muted)">Happy to talk through any of these systems or the finance work behind them.</p></div>
+      <div class="reach">
+        <div><b>Email</b><span style="user-select:all">abijithritchie94@gmail.com</span></div>
+        <div><b>LinkedIn</b><a href="https://www.linkedin.com/in/abijith-ritchie-steelson-1670a5180" target="_blank" rel="noopener">abijith-ritchie-steelson</a></div>
+        <div><b>Based in</b><span>Auckland, New Zealand</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="wrap">© 2026 Ritchie Steelson · System screens use sample data.</footer>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.filters button');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      btns.forEach(function(x){ x.classList.toggle('on', x === b); });
+      var f = b.dataset.f;
+      document.querySelectorAll('[data-cat]').forEach(function(el){ el.hidden = !(f === 'all' || el.dataset.cat === f); });
+    });
+  });
+
+  var links = document.querySelectorAll('.links a');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (!e.isIntersecting) return;
+        links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); }); });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('#home, main section[id]').forEach(function(s){ io.observe(s); });
+  }
+
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var done = false, nums = document.querySelectorAll('[data-count]');
+  function run(){
+    if (done) return; done = true;
+    nums.forEach(function(el, i){
+      var m = el.textContent.match(/^(\d+)(.*)$/); if (!m) return;
+      var end = +m[1], suf = m[2], t0 = null;
+      function step(t){ if (t0 === null) t0 = t; var p = Math.min((t - t0) / 1000, 1), e = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(end * e) + suf; if (p < 1) requestAnimationFrame(step); }
+      setTimeout(function(){ el.textContent = '0' + suf; requestAnimationFrame(step); }, i * 120);
+    });
+  }
+  if ('IntersectionObserver' in window){
+    var box = document.querySelector('.stats');
+    var fo = new IntersectionObserver(function(es){ if (es.some(function(e){ return e.isIntersecting; })) { run(); fo.disconnect(); } }, {threshold:.5});
+    if (box) fo.observe(box);
+  }
+})();
+</script>
+</body></html>
